@@ -15,7 +15,7 @@ const app=express();
 app.use(cookieParser());
 app.use(express.json());
 const corsOptions = {
-  origin: 'https://vercel.com/saket-nandas-projects/social-media-app/BKpHmNTkQrfsJbaUkP1fBCivNy75',
+  origin: 'https://social-media-jl3tqpi6a-saket-nandas-projects.vercel.app/',
   credentials: true,
 };
 app.use(cors(corsOptions));
