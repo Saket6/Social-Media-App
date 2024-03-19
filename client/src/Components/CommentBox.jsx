@@ -33,7 +33,7 @@ export const CommentBox = ({ handleSubmit, handleComment, show, setShow ,comment
                         {
                             return(
                                 <div key={i} className='comment'>
-                                    <img className='accountImg' src={`http://localhost:5000/assets/${comment.picturepath}`} alt="" style={{'marginRight':'10px'}} />
+                                    <img className='accountImg' src={`https://social-media-app-n8uj.onrender.com/assets/${comment.picturepath}`} alt="" style={{'marginRight':'10px'}} />
                                   {comment.comment}
                                 </div>
                             )

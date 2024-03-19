@@ -30,7 +30,7 @@ export const Profile = () => {
     const addRemoveFriend=async(id)=>
     {
         try{
-            const res=await fetch(`http://localhost:5000/user/friends/${id}`,{
+            const res=await fetch(`https://social-media-app-n8uj.onrender.com/user/friends/${id}`,{
                 method: 'GET',
                 headers:{
                     'Content-Type': 'application/json'
@@ -79,7 +79,7 @@ export const Profile = () => {
 
     const getUser = async () => {
         try {
-            const res = await fetch("http://localhost:5000/getUser", {
+            const res = await fetch("https://social-media-app-n8uj.onrender.com/getUser", {
                 method: "GET",
                 headers: { "Content-Type": "application/json" },
                 credentials: "include",
@@ -107,7 +107,7 @@ export const Profile = () => {
     const getUserPosts = async () => {
         try {
             if (user) {
-                const Posts = await fetch(`http://localhost:5000/posts/${user._id}`, {
+                const Posts = await fetch(`https://social-media-app-n8uj.onrender.com/posts/${user._id}`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     credentials: "include",
@@ -142,7 +142,7 @@ export const Profile = () => {
                     <div className="profileDiv">
                         <div className="middleDiv" id='proftop'>
                             <div className='cols'>
-                                <img className='profImg' src={`http://localhost:5000/assets/${user.picturepath}`} alt="prof" />
+                                <img className='profImg' src={`https://social-media-app-n8uj.onrender.com/assets/${user.picturepath}`} alt="prof" />
                                 <span>{user.name}</span>
                             </div>
                             <div className='cols'>
@@ -170,7 +170,7 @@ export const Profile = () => {
                                             return (
                                                 <div className="box postDiv" key={index} >
                                                     <section className="sec">
-                                                        <img className='accountImg' src={`http://localhost:5000/assets/${e.userpicturepath}`} alt="" />
+                                                        <img className='accountImg' src={`https://social-media-app-n8uj.onrender.com/assets/${e.userpicturepath}`} alt="" />
                                                         <h5 style={{ 'marginLeft': '10px' }} >{e.name}</h5>
 
                                                     </section>
@@ -182,9 +182,9 @@ export const Profile = () => {
                                                     <section className="sec">
                                                         {
                                                             e.type.startsWith('image/') ? (
-                                                                <img src={`http://localhost:5000/assets/${e.picturepath}`} className='postImg' alt="Hello" />
+                                                                <img src={`https://social-media-app-n8uj.onrender.com/assets/${e.picturepath}`} className='postImg' alt="Hello" />
                                                             ) : (
-                                                                <video src={`http://localhost:5000/assets/${e.picturepath}`} className='postImg videos '   ></video>
+                                                                <video src={`https://social-media-app-n8uj.onrender.com/assets/${e.picturepath}`} className='postImg videos '   ></video>
                                                             )
                                                         }
 
@@ -201,7 +201,7 @@ export const Profile = () => {
                                             friends.map((e, i) => {
                                                 return (
                                                     <div className="usersDiv" style={{ 'marginLeft': '10px' }} key={i}>
-                                                        <img src={`http://localhost:5000/assets/${e.picturepath}`} alt="" className="imgs" />
+                                                        <img src={`https://social-media-app-n8uj.onrender.com/assets/${e.picturepath}`} alt="" className="imgs" />
                                                         <span> {e.name} </span>
                                                         <GroupRemoveIcon className="add" onClick={() => confirm(e._id)} />
 

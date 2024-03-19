@@ -16,7 +16,7 @@ export const Requests = ({ show, setShow}) => {
 
 
   const getRequests = async () => {
-    const response = await fetch('http://localhost:5000/requests', {
+    const response = await fetch('https://social-media-app-n8uj.onrender.com/requests', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -77,7 +77,7 @@ export const Requests = ({ show, setShow}) => {
               return (
                
 
-                  <div key={index} className='request flex-center'>  <img className='imgs' style={{marginRight:'10px'}}  src={`http://localhost:5000/assets/${e.picturepath}`} alt="" />   {e.name} sent friend request  
+                  <div key={index} className='request flex-center'>  <img className='imgs' style={{marginRight:'10px'}}  src={`https://social-media-app-n8uj.onrender.com/assets/${e.picturepath}`} alt="" />   {e.name} sent friend request  
                   <button onClick={()=>acceptReject(e._id,1)} className='acceptBtn'  >☑️</button> 
                   <button onClick={()=>acceptReject(e._id,0)} className='rejectBtn'>❌</button>
                   </div> 

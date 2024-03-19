@@ -43,14 +43,14 @@ export const CreatePost = () => {
         e.preventDefault();
         const formdata=new FormData();
         formdata.append('profile',postDet.picture);
-        const profile=await fetch('http://localhost:5000/profile',{
+        const profile=await fetch('https://social-media-app-n8uj.onrender.com/profile',{
           method: 'POST',
             body: formdata
         })
         const ImgName=await profile.json();
         // console.log(ImgName);
 
-        const res=await fetch('http://localhost:5000/createpost',{
+        const res=await fetch('https://social-media-app-n8uj.onrender.com/createpost',{
           method: 'POST',
           headers: {'Content-Type': 'application/json'},
           body:JSON.stringify({
@@ -76,7 +76,7 @@ export const CreatePost = () => {
     {
       try{
         if(curr_user){
-          const Posts=await fetch('http://localhost:5000/posts/all',{
+          const Posts=await fetch('https://social-media-app-n8uj.onrender.com/posts/all',{
             method: 'POST',
             headers:{'Content-Type': 'application/json'},
             body: JSON.stringify({friends:curr_user.friends}),
@@ -110,7 +110,7 @@ export const CreatePost = () => {
               {curr_user ? (
                 <img
                   className="accountImg"
-                  src={`http://localhost:5000/assets/${curr_user.picturepath}`}
+                  src={`https://social-media-app-n8uj.onrender.com/assets/${curr_user.picturepath}`}
                   alt="prof"
                  
                 />

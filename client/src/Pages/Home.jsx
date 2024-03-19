@@ -25,7 +25,7 @@ export const Home = () => {
 
   const getUser = async () => {
     try {
-      const res = await fetch("http://localhost:5000/getUser", {
+      const res = await fetch("https://social-media-app-n8uj.onrender.com/getUser", {
         method: "GET",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
@@ -54,7 +54,7 @@ export const Home = () => {
   const addRemoveFriend=async(id)=>
     {
         try{
-            const res=await fetch(`http://localhost:5000/user/friends/${id}`,{
+            const res=await fetch(`https://social-media-app-n8uj.onrender.com/user/friends/${id}`,{
                 method: 'GET',
                 headers:{
                     'Content-Type': 'application/json'
@@ -119,7 +119,7 @@ export const Home = () => {
             {curr_user ? (
               <img
                 className="accountImg"
-                src={`http://localhost:5000/assets/${curr_user.picturepath}`}
+                src={`https://social-media-app-n8uj.onrender.com/assets/${curr_user.picturepath}`}
                 alt="prof"
               />
             ) : (
@@ -138,7 +138,7 @@ export const Home = () => {
               {
                 return (
                   <div className="usersDiv" style={{'marginLeft':'10px'}}  key={i}>
-                    <img src={`http://localhost:5000/assets/${e.picturepath}`} alt="" className="imgs"/>
+                    <img src={`https://social-media-app-n8uj.onrender.com/assets/${e.picturepath}`} alt="" className="imgs"/>
                     <span> {e.name} </span>  
                     <GroupRemoveIcon className="add" onClick={()=>confirm(e._id)} />  
                      

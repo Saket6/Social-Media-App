@@ -22,7 +22,7 @@ export const Navbar = () => {
   const Logout=async()=>
   {
     try{
-      const res=await fetch('http://localhost:5000/logout',{
+      const res=await fetch('https://social-media-app-n8uj.onrender.com/logout',{
         method: 'GET',
         headers: {'Content-Type': 'application/json',},
         credentials: 'include'
@@ -57,7 +57,7 @@ export const Navbar = () => {
           }
         
           {
-            curr_user?<NavLink to='/profile' ><img className='accountImg' src={`http://localhost:5000/assets/${curr_user.picturepath}`} alt="prof" /></NavLink>:<AccountCircleIcon className='dummyLogo'/>
+            curr_user?<NavLink to='/profile' ><img className='accountImg' src={`https://social-media-app-n8uj.onrender.com/assets/${curr_user.picturepath}`} alt="prof" /></NavLink>:<AccountCircleIcon className='dummyLogo'/>
             // curr_user? <p style={{'color':'white'}}>{curr_user.name}</p> :<AccountCircleIcon className='dummyLogo'/>
           }
           

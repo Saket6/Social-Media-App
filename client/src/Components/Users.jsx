@@ -13,7 +13,7 @@ export const Users = ({addRemoveFriend}) => {
     const getUsers=async()=>
     {
         try{
-            const res=await fetch('http://localhost:5000/users',{
+            const res=await fetch('https://social-media-app-n8uj.onrender.com/users',{
                 'method': 'GET',
                 'headers':{
                     'Content-Type': 'application/json'
@@ -48,7 +48,7 @@ export const Users = ({addRemoveFriend}) => {
                     {
                         return(
                             <div key={i} className="usersDiv">
-                                <img src={`http://localhost:5000/assets/${user.picturepath}`} alt="" className="imgs"   />
+                                <img src={`https://social-media-app-n8uj.onrender.com/assets/${user.picturepath}`} alt="" className="imgs"   />
                                 <span>{user.name}</span>
                                 <div className='flex-center end' >
                                     <GroupAddIcon className='add' style={{'justifySelf':'end'}}  onClick={()=>addRemoveFriend(user._id)} /> 

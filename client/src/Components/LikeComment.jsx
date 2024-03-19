@@ -48,7 +48,7 @@ export const LikeComment = ({post,deletePost}) => {
     const like = async() => {
 
         try{
-            const res=await fetch(`http://localhost:5000/like/${post._id}`,{
+            const res=await fetch(`https://social-media-app-n8uj.onrender.com/like/${post._id}`,{
                 'method':'POST',
                 'headers':{'Content-Type':'application/json'},
                 'credentials':'include',
@@ -82,7 +82,7 @@ export const LikeComment = ({post,deletePost}) => {
     {
         e.preventDefault();
         try{
-            const res=await fetch(`http://localhost:5000/comment/${post._id}`,{
+            const res=await fetch(`https://social-media-app-n8uj.onrender.com/comment/${post._id}`,{
                 'method': 'POST',
                 'headers': {'Content-Type': 'application/json'},
                 'body': JSON.stringify({comment}),

@@ -31,7 +31,7 @@ export const Login = () => {
   {
     e.preventDefault();
     try{
-      const res=await fetch('http://localhost:5000/user/login',{
+      const res=await fetch('https://social-media-app-n8uj.onrender.com/user/login',{
         method: 'POST',
         headers:{
           'Content-Type': 'application/json'
@@ -68,7 +68,7 @@ export const Login = () => {
 
   const getUser = async () => {
     try {
-      const res = await fetch("http://localhost:5000/getUser", {
+      const res = await fetch("https://social-media-app-n8uj.onrender.com/getUser", {
         method: "GET",
         headers: { "Content-Type": "application/json" },
         credentials: "include",

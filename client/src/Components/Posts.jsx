@@ -18,7 +18,7 @@ export const Posts = ({ allPosts }) => {
   const deletePost=async(id)=>
   {
     try{
-      const res=await fetch(`http://localhost:5000/deletePost/${id}`,{
+      const res=await fetch(`https://social-media-app-n8uj.onrender.com/deletePost/${id}`,{
         method: 'GET',
         headers:{
           'Content-Type': 'application/json'
@@ -90,7 +90,7 @@ export const Posts = ({ allPosts }) => {
           return (
             <div className="box postDiv" key={index} >
               <section className="sec">
-                <img className='accountImg' src={`http://localhost:5000/assets/${e.userpicturepath}`} alt="" />
+                <img className='accountImg' src={`https://social-media-app-n8uj.onrender.com/assets/${e.userpicturepath}`} alt="" />
                 <h5 style={{'marginLeft':'10px'}} >{e.name}</h5>
                 
               </section>
@@ -102,9 +102,9 @@ export const Posts = ({ allPosts }) => {
               <section className="sec">
                 {
                   e.type.startsWith('image/')?(
-                    <img src={`http://localhost:5000/assets/${e.picturepath}`} className='postImg' alt="Hello" />
+                    <img src={`https://social-media-app-n8uj.onrender.com/assets/${e.picturepath}`} className='postImg' alt="Hello" />
                   ):(
-                    <video src={`http://localhost:5000/assets/${e.picturepath}`} className='postImg videos '   ></video>
+                    <video src={`https://social-media-app-n8uj.onrender.com/assets/${e.picturepath}`} className='postImg videos '   ></video>
                   )
                 }
                

@@ -42,7 +42,7 @@ export const Register = () => {
         e.preventDefault();
         const formdata=new FormData();
         formdata.append('profile',userDet.picturepath);
-        const profile=await fetch('http://localhost:5000/profile',{
+        const profile=await fetch('https://social-media-app-n8uj.onrender.com/profile',{
           method: 'POST',
             // headers:{
             //   'Content-Type': 'multipart/form-data'
@@ -53,7 +53,7 @@ export const Register = () => {
         console.log(ImgName);
 
 
-        const res=await fetch('http://localhost:5000/user/register',{
+        const res=await fetch('https://social-media-app-n8uj.onrender.com/user/register',{
         method: 'POST',
         headers:{ 'Content-Type': 'application/json'},
         body: JSON.stringify({...userDet,picturepath:ImgName.filename})
