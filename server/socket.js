@@ -2,7 +2,7 @@ const server=require('http').createServer();
 const User=require('./models/User');
 const io = require('socket.io')(server,{
     cors: {
-      origin: "https://social-media-jl3tqpi6a-saket-nandas-projects.vercel.app/"
+      origin: "https://social-media-jl3tqpi6a-saket-nandas-projects.vercel.app"
     }
   });
 
