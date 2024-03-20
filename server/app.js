@@ -57,9 +57,7 @@ app.post('/profile', upload.single('profile'), function (req, res, next) {
     return res.json({"filename": req.generatedFilename, "filetype": req.filetype});
   })
 
-  app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../client/dist', 'index.html'));
-  });
+  
   
 
 app.get('/',auth ,(req,res)=>
@@ -73,7 +71,9 @@ app.use(Router);
 
 
 
-
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/dist', 'index.html'));
+});
 
 
 
