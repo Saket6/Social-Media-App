@@ -8,8 +8,9 @@ const auth=async (req,res,next)=>
     try{
         if(token)
         {
-            // console.log(token);
+            console.log(" token found :",token);
             const verify=jwt.verify(token,process.env.SECRET_KEY);
+            console.log(process.env.SECRET_KEY);
             const curruser=await User.findOne({_id: verify.id});
             console.log(curruser);
             req.currUser=curruser;
