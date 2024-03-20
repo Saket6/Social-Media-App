@@ -9,7 +9,7 @@ module.exports=function socket(server)
 {
   const io = require('socket.io')(server,{
     cors: {
-      origin: "https://social-media-app-1-n8hx.onrender.com/"
+      origin: "https://social-media-app-1-n8hx.onrender.com"
     }
   });
       io.on('connection', client => {;

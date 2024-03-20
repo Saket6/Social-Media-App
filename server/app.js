@@ -15,7 +15,7 @@ const app=express();
 app.use(cookieParser());
 app.use(express.json());
 const corsOptions = {
-  origin: 'https://social-media-app-1-n8hx.onrender.com/',
+  origin: 'https://social-media-app-1-n8hx.onrender.com',
   credentials: true,
 };
 app.use(cors(corsOptions));
