@@ -74,6 +74,7 @@ const Logout = (req, res) => {
 }
 
 const getUser = async (req, res) => {
+    console.log("at get User");
     try {
         if(req.currUser)
         {

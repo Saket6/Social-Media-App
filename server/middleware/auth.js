@@ -4,6 +4,7 @@ require('dotenv').config()
 
 const auth=async (req,res,next)=>
 {
+    console.log("at auth");
     const token=req.cookies.user;
     try{
         if(token)
