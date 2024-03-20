@@ -64,7 +64,8 @@ const Login = async (req, res) => {
 
 
 const Logout = (req, res) => {
-    res.cookie("user", "", { maxAge: -1, secure: false },);
+    // res.cookie("user", "", { maxAge: -1, secure: false },);
+    res.cookie("user", "", { maxAge: -1, secure: true, httpOnly: true,sameSite: 'None'});
     const idString=req.currUser._id.toString();
     // console.log(idString);
     // console.log(global.onlineUsers.get(idString));
