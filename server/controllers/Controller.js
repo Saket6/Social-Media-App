@@ -55,7 +55,7 @@ const Login = async (req, res) => {
                 date: Date.now(),
             }
             const token = jwt.sign(tokendata, SECRET_KEY);
-            res.cookie("user", token, { maxAge: 9000000, secure: false },);
+            res.cookie("user", token, { maxAge: 9000000, secure: true, httpOnly: true,});
             // console.log(res.cookie);
             return res.status(200).json({ message: "Signed in successfully",user: exist_user });
         }

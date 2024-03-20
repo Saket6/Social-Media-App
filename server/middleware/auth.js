@@ -11,7 +11,7 @@ const auth=async (req,res,next)=>
             // console.log(token);
             const verify=jwt.verify(token,process.env.SECRET_KEY);
             const curruser=await User.findOne({_id: verify.id});
-            // console.log(curruser);
+            console.log(curruser);
             req.currUser=curruser;
             // console.log("Token Verified",req.currUser.name);
         }
