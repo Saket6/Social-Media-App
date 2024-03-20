@@ -1,17 +1,17 @@
-const server=require('http').createServer();
+// const app=require('./app.js')
+// const server=require('http').createServer(app);
 const User=require('./models/User');
-const io = require('socket.io')(server,{
-    cors: {
-      origin: "https://social-media-jl3tqpi6a-saket-nandas-projects.vercel.app"
-    }
-  });
-
 
   global.onlineUsers=new Map();
 
 
-function socket()
+module.exports=function socket(server)
 {
+  const io = require('socket.io')(server,{
+    cors: {
+      origin: "https://social-media-jl3tqpi6a-saket-nandas-projects.vercel.app"
+    }
+  });
       io.on('connection', client => {;
         client.on('addUser' , (id)=>
         {
@@ -69,7 +69,10 @@ function socket()
 
       });
       
-      server.listen(3000);
+      server.listen(5000,()=>
+      {
+        console.log('Server Listening on port 5000');
+      });
 }
 
-module.exports=socket;
+// module.exports=socket;

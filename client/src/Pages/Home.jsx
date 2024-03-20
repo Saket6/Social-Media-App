@@ -21,7 +21,7 @@ export const Home = () => {
   const dispatch = useDispatch();
   const curr_user = useSelector((state) => state?.user);
   let friends = useSelector((state) => state?.friends);
-  const socket = io('http://localhost:3000');
+  const socket = io('https://social-media-app-n8uj.onrender.com');
 
   const getUser = async () => {
     try {

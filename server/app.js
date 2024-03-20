@@ -65,13 +65,11 @@ app.get('/',auth ,(req,res)=>
 
 //socket.io 
 
-socket();
+const server=require('http').createServer(app);
+socket(server);
 
 
-
-
-
-app.listen(process.env.PORT,(req,res)=>
-{
-    console.log(`Server listening on ${process.env.PORT}`);
-});
+// app.listen(process.env.PORT,(req,res)=>
+// {
+//     console.log(`Server listening on ${process.env.PORT}`);
+// });

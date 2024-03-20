@@ -8,7 +8,7 @@ export const Users = ({addRemoveFriend}) => {
 
     const [allUsers,setUsers]=useState([]);
     const user = useSelector((state) => state.user)
-    const socket = io('http://localhost:3000');
+    const socket = io('https://social-media-app-n8uj.onrender.com');
 
     const getUsers=async()=>
     {

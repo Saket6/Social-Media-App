@@ -32,7 +32,7 @@ export const Requests = ({ show, setShow}) => {
   const acceptReject=(id,accept)=>
   {
     console.log("accept value is : ",accept);
-    const socket = io('http://localhost:3000');
+    const socket = io('https://social-media-app-n8uj.onrender.com');
     if(accept)
     {
       socket.emit('acceptFriendRequest', [id,user._id]);

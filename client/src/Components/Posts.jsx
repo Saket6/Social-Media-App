@@ -59,7 +59,7 @@ export const Posts = ({ allPosts }) => {
   useEffect(() => {
  
     // console.log("use effect called");
-    const socket = io('http://localhost:3000');
+    const socket = io('https://social-media-app-n8uj.onrender.com');
     socket.emit('addUser', user._id);
 
     socket.on('newFriendRequest', (data) => {
