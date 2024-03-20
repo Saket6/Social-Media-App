@@ -28,7 +28,7 @@ const multer  = require('multer')
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    const uploadDir = path.join(__dirname, 'public/assets'); // Adjust the path as needed
+    const uploadDir = path.join(__dirname, './public/assets'); // Adjust the path as needed
     fs.mkdir(uploadDir, { recursive: true }, function (err) {
         if (err) {
             console.error('Error creating directory:', err);
