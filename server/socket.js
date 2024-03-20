@@ -4,6 +4,7 @@ const User=require('./models/User');
 
   global.onlineUsers=new Map();
 
+  const PORT=process.env.PORT || 5000;
 
 module.exports=function socket(server)
 {
@@ -69,9 +70,9 @@ module.exports=function socket(server)
 
       });
       
-      server.listen(5000,()=>
+      server.listen(PORT,()=>
       {
-        console.log('Server Listening on port 5000');
+        console.log(`Server Listening on port ${PORT}`);
       });
 }
 

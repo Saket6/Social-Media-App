@@ -46,9 +46,15 @@ const storage = multer.diskStorage({
 
 app.post('/profile', upload.single('profile'), function (req, res, next) {
    
+   console.log("registration ")
     return res.json({"filename": req.generatedFilename, "filetype": req.filetype});
   })
 
+app.get('/',auth ,(req,res)=>
+{
+
+    res.send("Home Page");
+})
 
 app.use(Router);
 
@@ -57,11 +63,7 @@ app.use(Router);
 
 
 
-app.get('/',auth ,(req,res)=>
-{
 
-    res.send("Home Page");
-})
 
 //socket.io 
 
