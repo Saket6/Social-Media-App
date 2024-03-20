@@ -6,6 +6,7 @@ const auth=async (req,res,next)=>
 {
     console.log("at auth");
     const token=req.cookies.user;
+    console.log('token is',token);
     try{
         if(token)
         {
